@@ -55,6 +55,16 @@ def clean_reviews(df):
     df.drop_duplicates(subset=['review_id'], inplace=True)
     return df
 
+# Cleaning logic
+cleaning_functions = {
+    "orders": clean_orders,
+    "customers": clean_customers,
+    "products": clean_products,
+    "order_items": clean_order_items,
+    "sellers": clean_sellers,
+    "payments": clean_payments,
+    "reviews": clean_reviews,
+}
 
 
 
