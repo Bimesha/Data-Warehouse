@@ -76,7 +76,10 @@ for file_name, dataset_name in datasets.items():
     clean_func = cleaning_functions[dataset_name]
     cleaned_df = clean_func(df)
 
-
+    # Save cleaned data
+    cleaned_file_path = os.path.join(CLEANED_DATA_DIR, file_name)
+    cleaned_df.to_csv(cleaned_file_path, index=False)
+    print(f"Cleaned {file_name} saved to {cleaned_file_path}")
 
 
 
