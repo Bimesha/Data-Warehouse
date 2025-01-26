@@ -72,7 +72,9 @@ for file_name, dataset_name in datasets.items():
     print(f"Cleaning {file_name}...")
     df = pd.read_csv(file_path)
 
-
+    # Clean using the appropriate function
+    clean_func = cleaning_functions[dataset_name]
+    cleaned_df = clean_func(df)
 
 
 
