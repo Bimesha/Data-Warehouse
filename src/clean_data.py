@@ -66,7 +66,11 @@ cleaning_functions = {
     "reviews": clean_reviews,
 }
 
-
+# Process each dataset
+for file_name, dataset_name in datasets.items():
+    file_path = os.path.join(DATA_DIR, file_name)
+    print(f"Cleaning {file_name}...")
+    df = pd.read_csv(file_path)
 
 
 
